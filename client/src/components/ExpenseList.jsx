@@ -45,6 +45,7 @@ export const ExpenseList = () => {
     //render update component on state change
     const handleEdit = (exp) => {
         setUpdate((prev) => ({ ...prev, id: exp._id, isTrue: true, category: exp.category, date: dateFormate(exp.date), description: exp.description, amount: exp.amount }));
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     //Handle delete expenses
